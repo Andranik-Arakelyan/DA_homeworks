@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 180px;
+        padding: 10px;
+        border: 2px solid #271d1d;
+      }
+
+      .calculator input {
+        margin-bottom: 5px;
+      }
+
+      .calculator button {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" id="number1" placeholder="Number 1" />
+      <input type="number" id="number2" placeholder="Number 2" />
+      <button onclick="addition()">Add</button>
+      <button onclick="subtraction()">Subtract</button>
+      <button onclick="multiplication()">Multiply</button>
+      <button onclick="division()">Divide</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function addition() {
+        let num1 = parseFloat(document.getElementById("number1").value);
+        let num2 = parseFloat(document.getElementById("number2").value);
+        let result = num1 + num2;
+        document.getElementById("result").innerHTML =
+          "The result is: " + result;
+      }
+
+      function subtraction() {
+        let num1 = parseFloat(document.getElementById("number1").value);
+        let num2 = parseFloat(document.getElementById("number2").value);
+        let result = num1 - num2;
+        document.getElementById("result").innerHTML =
+          "The result is: " + result;
+      }
+
+      function multiplication() {
+        let num1 = parseFloat(document.getElementById("number1").value);
+        let num2 = parseFloat(document.getElementById("number2").value);
+        let result = num1 * num2;
+        document.getElementById("result").innerHTML =
+          "The result is: " + result;
+      }
+
+      function division() {
+        let num1 = parseFloat(document.getElementById("number1").value);
+        let num2 = parseFloat(document.getElementById("number2").value);
+        let result = num1 / num2;
+        document.getElementById("result").innerHTML = "The result is" + result;
+      }
+    </script>
+  </body>
+</html>
