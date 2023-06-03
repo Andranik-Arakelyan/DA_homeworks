@@ -1,0 +1,101 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+body {
+  font-family: Roboto;
+  padding: 0 50px 35px 50px;
+}
+
+.df {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  color: rgb(39, 34, 34);
+  justify-content: space-between;
+  padding-top: 10px;
+}
+header ul {
+  gap: 25px;
+  list-style: none;
+}
+header img {
+  height: auto;
+  width: 50px;
+}
+header a {
+  color: inherit;
+  font-size: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header a:hover {
+  color: rgb(136, 66, 66);
+}
+
+.sydney-section {
+  background-image: url("../assets/img/big.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 670px;
+  max-width: 1700px;
+  width: 100%;
+}
+.sydney-section-title {
+  color: rgb(255, 255, 255);
+  gap: 5px;
+  letter-spacing: 12px;
+  margin-bottom: 13%;
+  text-align: center;
+}
+.sydney-section-title .child:first-child {
+  font-size: 52px;
+}
+.sydney-section-title .child:nth-child(2) {
+  font-size: 18px;
+}
+
+article {
+  line-height: 1.2;
+  opacity: 0.85;
+  padding: 0 0 50px 0;
+}
+article .line {
+  background-color: rgba(228, 221, 221, 0.5490196078);
+  box-shadow: 0 0 12px rgba(255, 253, 255, 0.808);
+  height: 53px;
+  text-align: center;
+  width: 8px;
+}
+article .text-cont {
+  gap: 10px;
+  text-align: center;
+  width: 38%;
+}
+article .text-cont p {
+  margin: 40px 0;
+}
+
+.blocks {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.blocks figure {
+  margin: 0;
+}
+.blocks img {
+  height: 100%;
+  width: 100%;
+}

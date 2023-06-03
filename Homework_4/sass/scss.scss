@@ -1,0 +1,113 @@
+@import "scss-files/base.scss";
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body {
+  font-family: Roboto;
+  padding: 0 50px 35px 50px;
+}
+
+.df {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  color: $text-color;
+  justify-content: space-between;
+  padding-top: 10px;
+
+  ul {
+    gap: 25px;
+    list-style: none;
+  }
+
+  img {
+    height: auto;
+    width: 50px;
+  }
+
+  a {
+    color: inherit;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.sydney-section {
+  background-image: url("../assets/img/big.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 670px;
+  max-width: 1700px;
+  width: 100%;
+
+  &-title {
+    color: rgb(255, 255, 255);
+    gap: 5px;
+    letter-spacing: 12px;
+    margin-bottom: 13%;
+    text-align: center;
+
+    .child:first-child {
+      font-size: 52px;
+    }
+    .child:nth-child(2) {
+      font-size: 18px;
+    }
+  }
+}
+
+article {
+  line-height: 1.2;
+  opacity: 0.85;
+  padding: 0 0 50px 0;
+
+  .line {
+    background-color: #e4dddd8c;
+    box-shadow: 0 0 12px rgba(255, 253, 255, 0.808);
+    height: 53px;
+    text-align: center;
+    width: 8px;
+  }
+  .text-cont {
+    gap: 10px;
+    text-align: center;
+    width: 38%;
+    p {
+      margin: 40px 0;
+    }
+  }
+}
+
+.blocks {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

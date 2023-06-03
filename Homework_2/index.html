@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Flag</th>
+            <th>Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td>Berlin</td>
+          </tr>
+          <tr>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)">Oslo</td>
+          </tr>
+          <tr>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td>Bern</td>
+          </tr>
+          <tr>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td>Canberra</td>
+          </tr>
+          <tr>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td>Deli</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <h1>Drag and drop the corresponding flags and country names</h1>
+        <aside class="tasks">
+          <div class="countries">
+            <span id="item1" draggable="true" ondragstart="drag(event)"
+              >Australia</span
+            >
+            <span id="item2" draggable="true" ondragstart="drag(event)"
+              >India</span
+            >
+            <span id="item3" draggable="true" ondragstart="drag(event)"
+              >Germany</span
+            >
+            <span id="item4" draggable="true" ondragstart="drag(event)"
+              >Switzerland</span
+            >
+            <span id="item5" draggable="true" ondragstart="drag(event)"
+              >Norway</span
+            >
+          </div>
+          <div class="flags">
+            <img
+              id="item6"
+              draggable="true"
+              src="assets/norway.png"
+              ondragstart="drag(event)"
+              alt=""
+            />
+            <img
+              id="item7"
+              draggable="true"
+              src="assets/germany.png"
+              ondragstart="drag(event)"
+              alt=""
+            />
+            <img
+              id="item8"
+              draggable="true"
+              src="assets/india.png"
+              ondragstart="drag(event)"
+              alt=""
+            />
+            <img
+              id="item9"
+              draggable="true"
+              src="assets/switzer.png"
+              ondragstart="drag(event)"
+              alt=""
+            />
+            <img
+              id="item0"
+              draggable="true"
+              src="assets/austral.png"
+              ondragstart="drag(event)"
+              alt=""
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="container">
+      <form>
+        <div>
+          <h3>Complete this form</h3>
+        </div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+
+        <div>
+          <label for="lastname">SurName:</label>
+          <input type="text" name="lastname" id="lastname" required />
+        </div>
+
+        <div>
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="5"
+            max="120"
+            value="18"
+          />
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" />
+        </div>
+
+        <div>
+          <label for="occupation">Choose an occupation</label>
+          <select name="occupation" id="occupation">
+            <option value="student">Student</option>
+            <option value="pupil">Pupil</option>
+            <option value="worker">Worker</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" name="submit" value="Submit" />
+          <input type="reset" name="reset" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        let data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+body {
+  background-color: #f4d1d1;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 400px);
+  grid-template-areas:
+    ". second second ."
+    "fourth fifth fifth ."
+    "fourth fifth fifth .";
+}
+
+.image-gallery > div {
+  overflow: hidden;
+}
+
+.heading-primary {
+  margin-top: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.second {
+  grid-area: second;
+}
+
+.fourth {
+  grid-area: fourth;
+}
+
+.fifth {
+  grid-area: fifth;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}

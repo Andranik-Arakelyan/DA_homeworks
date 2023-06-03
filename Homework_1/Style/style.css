@@ -1,0 +1,155 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  background-image: url("../Assets/Office.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.about-body {
+  background: none;
+  background-color: #e1daceb3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  background-color: #cac3b3;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header ul a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  display: inline-block;
+  color: #411b08;
+  transition: all 0.2s;
+  padding: 0 1rem;
+  background-color: transparent;
+}
+
+header ul a:hover {
+  color: #b09079;
+}
+
+.search-bar,
+.search-btn {
+  padding: 0.4rem 1.5rem;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.search-bar {
+  opacity: 0.5;
+}
+
+.search-btn {
+  background-color: #cec14e;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #a69c3e;
+}
+
+.hide-search {
+  display: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+}
+
+.main article {
+  width: 40%;
+  font-size: 2rem;
+  background-color: #c6b395;
+  padding: 1.5rem;
+  box-shadow: 0 0 1.4rem #eee;
+  border-radius: 2rem;
+}
+
+.mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mission div {
+  width: 38%;
+}
+
+.mission div img {
+  box-shadow: 0 0 1.2rem #826537;
+}
+
+.mission div h3 {
+  font-size: 3.6rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  margin-top: 12rem;
+  padding-bottom: 15rem;
+}
+
+.text-cont {
+  padding: 0 1.5rem;
+}
+
+.careers-container {
+  display: flex;
+  margin-top: 10rem;
+  padding-bottom: 15rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.careers-container img {
+  width: 100%;
+  height: 25rem;
+}
+
+.careers-container div {
+  width: 30%;
+  background-color: #eee;
+  box-shadow: 0 0 2rem #aaa;
+  transition: all 0.2s;
+  border-radius: 1rem;
+}
+
+.careers-container div:hover {
+  transform: translateY(-2rem);
+}
+
+.careers-container h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.careers-container p {
+  padding: 2rem;
+}
